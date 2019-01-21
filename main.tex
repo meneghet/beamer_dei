@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+\input{set_themes.tex}
+}
+
+\input{set_packages.tex}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\input{title_page.tex}
+
+\begin{document}
+
+\begin{frame}%[plain]
+
+\titlepage
+\begin{textblock*}{100mm}(.91\textwidth,-0.95cm)
+% \pgftext[right,bottom,at=\pgfpoint{0.95\paperwidth}{.4cm}]{\pgfuseimage{logoUnipd}}
+% \includegraphics[height=1.4cm,width=2cm,keepaspectratio]{theme_img/dei_logo1.png}
+\end{textblock*}
+\end{frame}
+
+
+
+% Table of contents slide, comment this block out to remove it
+\begin{frame}
+\frametitle{Talk overview}
+\tableofcontents 
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Introduction}
+%------------------------------------------------
+\input{1_introduction.tex}
+
+%------------------------------------------------
+\section{Methods}
+%------------------------------------------------
+\input{2_methods.tex}
+
+
+%------------------------------------------------
+\section{Results}
+%------------------------------------------------
+
+%------------------------------------------------
+% Need to use the fragile option when verbatim is used in the slide
+\begin{frame}[fragile]
+\frametitle{Citation}
+An example of the \verb|\cite| command to cite within the presentation:\\~
+
+This statement requires citation \cite{p1}.
+\end{frame}
+
+%------------------------------------------------
+% Beamer does not support BibTeX so references must be inserted manually as below
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99} 
+\bibitem[Smith, 2012]{p1} John Smith (2012)
+\newblock Title of the publication
+\newblock \emph{Journal Name} 12(3), 45 -- 678.
+\end{thebibliography}
+}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
